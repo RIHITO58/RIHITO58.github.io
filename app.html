@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>運動 App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card-content {
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>運動 App</h1>
+    <p>保持健康，提升自我</p>
+</header>
+
+<nav>
+    <a href="#home">首頁</a>
+    <a href="#plan">運動計劃</a>
+    <a href="#record">運動紀錄</a>
+</nav>
+
+<div class="container" id="home">
+    <section>
+        <h2 class="section-title">今日運動目標</h2>
+        <div class="card">
+            <div class="card-header">步數目標：10,000步</div>
+            <div class="card-content">今天您已經走了 5,236 步，還差 4,764 步。</div>
+        </div>
+    </section>
+    <section>
+        <h2 class="section-title">運動類別</h2>
+        <div class="card">
+            <div class="card-header">推薦運動：跑步</div>
+            <div class="card-content">這是提升心肺功能和燃燒卡路里的絕佳運動。</div>
+            <button>開始運動</button>
+        </div>
+    </section>
+</div>
+
+<div class="container" id="plan">
+    <section>
+        <h2 class="section-title">我的運動計劃</h2>
+        <div class="card">
+            <h3>新增運動計劃</h3>
+            <form action="#">
+                <div class="form-group">
+                    <label for="exerciseName">運動名稱</label>
+                    <input type="text" id="exerciseName" name="exerciseName" placeholder="例如：跑步">
+                </div>
+                <div class="form-group">
+                    <label for="duration">運動時長（分鐘）</label>
+                    <input type="number" id="duration" name="duration" placeholder="例如：30">
+                </div>
+                <button type="submit">新增計劃</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<div class="container" id="record">
+    <section>
+        <h2 class="section-title">運動紀錄</h2>
+        <div class="card">
+            <div class="card-header">今天的運動</div>
+            <div class="card-content">
+                <ul>
+                    <li>跑步：30 分鐘 - 5,000 步</li>
+                    <li>健身房：45 分鐘 - 200 卡路里</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 運動 App | 保持活力，保持健康</p>
+</footer>
+
+</body>
+</html>
